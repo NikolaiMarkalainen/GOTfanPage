@@ -22,17 +22,40 @@ h1{
     margin: 5px;
 }
 #detail-container{
+    background-color: lightgray;
+    display: flexbox;
     width:50%;
-    height:100px;
     background-color: white;
     border:1px black solid;
     margin:5px;
+    overflow: hidden;
+    object-position: center;    
+    
+    
+}
+#detail-container > img{
+    object-fit: cover;
+    object-position: top;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+#detail-image{
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    max-height: 50%;
+    max-width: 50%;
+    border:3px black solid;
 }
 #list-item-container{
     display: flex;
     flex-direction: row;
     margin-left: 5px;
     margin-right: 5px;
+}
+#list-item-container:hover{
+    background-color: lightgray;
 }
 #list-fullName{
     width:50%;
@@ -41,6 +64,6 @@ h1{
     width: 35%;
 }
 #list-avatar > img {
-    width:30px;
-    height:30px;
+    width: 70px;;
+    height:70px;
 }

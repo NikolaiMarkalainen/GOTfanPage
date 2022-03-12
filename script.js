@@ -19,6 +19,7 @@ createListItems = (item) => {
     listItemElement.append(avatarItem)
 
     listItemElement.onclick = () => {
+        console.log(item)
         fetchCharacterData(item.id)
        
     }
@@ -27,10 +28,13 @@ createListItems = (item) => {
 
 fillDetailView = (character) => {
     document.getElementById("detail-fullname").innerHTML = character.fullName;
+    document.getElementById("detail-title").innerHTML = character.title;
+    const imageElement = document.getElementById("detail-image")
+    imageElement.src = character.imageUrl
 }
 fetchCharacterData = async (id) => {
     try{
-    const response = await fetch("https://thronesapi.com/api/v2/Characters" + id) 
+    const response = await fetch("https://thronesapi.com/api/v2/Characters/" + id) 
     const data = await response.json()
     console.log(data)
     fillDetailView(data)
