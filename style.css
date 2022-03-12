@@ -1,0 +1,46 @@
+body{
+    background-color: lightgray;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h1{
+    text-align: center;
+}
+#main-container{
+    display:flex;
+    width: 85%;
+    margin-left: auto;
+    margin-right:auto;
+
+}
+#list-container{
+    display: flex;
+    flex-direction: column;
+    width:50%;
+    background-color: white;
+    
+    border:1px black solid;
+    margin: 5px;
+}
+#detail-container{
+    width:50%;
+    height:100px;
+    background-color: white;
+    border:1px black solid;
+    margin:5px;
+}
+#list-item-container{
+    display: flex;
+    flex-direction: row;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+#list-fullName{
+    width:50%;
+}
+#list-avatar{
+    width: 35%;
+}
+#list-avatar > img {
+    width:30px;
+    height:30px;
+}
